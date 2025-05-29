@@ -36,6 +36,26 @@ class VideoResource extends Resource
                     ->required()
                     ->numeric()
                     ->default(0),
+                Forms\Components\TextInput::make('count_tiktok')
+                    ->required()
+                    ->numeric()
+                    ->default(0),
+                Forms\Components\TextInput::make('count_facebook')
+                    ->required()
+                    ->numeric()
+                    ->default(0),
+                Forms\Components\TextInput::make('count_youtube')
+                    ->required()
+                    ->numeric()
+                    ->default(0),
+                Forms\Components\TextInput::make('count_instagram')
+                    ->required()
+                    ->numeric()
+                    ->default(0),
+                Forms\Components\TextInput::make('count_whatsapp')
+                    ->required()
+                    ->numeric()
+                    ->default(0),
                 Forms\Components\Toggle::make('state')
                     ->required(),
             ]);
@@ -52,6 +72,21 @@ class VideoResource extends Resource
                 Tables\Columns\TextColumn::make('resource_url')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('click_count')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('count_tiktok')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('count_facebook')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('count_youtube')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('count_instagram')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('count_whatsapp')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('state')

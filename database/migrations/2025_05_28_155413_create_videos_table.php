@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('url');
             $table->string('resource_url');
             $table->integer('click_count')->default(0);
+            $table->integer('count_tiktok')->default(0);
+            $table->integer('count_facebook')->default(0);
+            $table->integer('count_youtube')->default(0);
+            $table->integer('count_instagram')->default(0);
+            $table->integer('count_whatsapp')->default(0);
             $table->boolean('state')->default(true);
             $table->timestamps();
         });
